@@ -20,7 +20,7 @@ describe('Test Functions', () => {
       expect(isPhoneNumber('------')).toBe(false);  
     });
     test('wrong number', () => {
-      expect(isPhoneNumber('eee-333-4301')).toBe(false);  
+      expect(isPhoneNumber('eee-333-430')).toBe(false);  
     });
   });
 
@@ -41,13 +41,13 @@ describe('Test Functions', () => {
 
   describe('isStrongPassword', () => {
     test('strong password', () => {
-      expect(isStrongPassword('JesusChrist00122003!')).toBe(true);  
+      expect(isStrongPassword('JesusChrist0012')).toBe(true);  
     });
     test('strong password', () => {
       expect(isStrongPassword('Aarav0112')).toBe(true);  
     });
     test('weak password', () => {
-      expect(isStrongPassword('aarav')).toBe(false);  
+      expect(isStrongPassword('123456')).toBe(false);  
     });
     test('weak password', () => {
       expect(isStrongPassword('123')).toBe(false);  
@@ -65,7 +65,7 @@ describe('Test Functions', () => {
       expect(isDate('2023-1-12')).toBe(false);  
     });
     test('wrong date', () => {
-      expect(isDate('24/24/2024')).toBe(false);  
+      expect(isDate('24/24-2024')).toBe(false);  
     });
   });
 

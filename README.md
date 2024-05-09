@@ -1,9 +1,9 @@
 # Lab 5 - Starter
-Aarav Tiku
+Aarav Tiku(worked alone)
 
 1) Would you use a unit test to test the “message” feature of a messaging application? Why or why not? For this question, assume the “message” feature allows a user to write and send a message to another user.
 
-I would definitely use unit tests to test the 'messaging feature'. A crucial test would be probably to ensure that the text that is being sent is identical and the same to the text that is being received, I believe
+I would definitely use unit tests to test the 'messaging feature'. A crucial test would be probably to ensure that the text that is being sent is identical and the same to the text that is being received, I believe.
 
 2) Would you use a unit test to test the “max message length” feature of a messaging application? Why or why not? For this question, assume the “max message length” feature prevents the user from typing more than 80 characters.
 

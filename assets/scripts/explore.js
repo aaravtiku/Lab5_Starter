@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 let voices = [];
 const voiceSelect = document.getElementById('voice-select');
-const textValue = document.getElementById('text-to-speak');
+var textValue;
 const theImg = document.querySelector('#explore img');
 const speakButton = document.getElementById('explore').querySelector('button');
 
@@ -31,6 +31,8 @@ function populateTheList() {
 
 function speak() {
   theImg.src = 'assets/images/smiling-open.png';
+
+  textValue = document.getElementById('text-to-speak').value;
   
   if (window.speechSynthesis.speaking) {
     console.error('Speech synthesis already in progress.');
@@ -42,8 +44,13 @@ function speak() {
     return;
   }
 
-  const selectedVoiceName = voiceSelect.value;
+  console.log(voices);
+  var selectedVoiceName = voiceSelect.value;
+  const splittedString = selectedVoiceName.split(' ');
+  selectedVoiceName = splittedString[0];
+  console.log(selectedVoiceName);
   const selectedVoice = voices.find(voice => voice.name === selectedVoiceName);
+  console.log(selectedVoice);
   if (!selectedVoice) {
     console.error('Selected voice not found.');
     return;
